@@ -1,0 +1,18 @@
+[project]
+name = "rl-connect-four"
+version = "0.1.0"
+description = "Rediscovering AlphaZero through Connect Four"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
