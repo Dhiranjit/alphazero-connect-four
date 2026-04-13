@@ -13,6 +13,7 @@ def create_board():
 
 
 def drop_piece(board, col, player):
+    # Scan from the bottom up — pieces settle at the lowest empty row
     for row in range(ROWS - 1, -1, -1):
         if board[row][col] == EMPTY:
             new_board = [r[:] for r in board]
@@ -54,7 +55,7 @@ def check_win(board, player):
 
 
 def is_draw(board):
-    """If there are no more legal moves without anyone winning then draw"""
+    # No legal moves left and no winner — board is full
     return len(get_legal_actions(board)) == 0
     
 
