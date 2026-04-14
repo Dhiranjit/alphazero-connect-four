@@ -1,4 +1,13 @@
+"""
+Pure game engine for Connect Four.
 
+Defines the board representation and all game mechanics: placing pieces,
+checking for wins, detecting draws, and listing legal moves. No learning,
+no agents — just the rules of the game.
+
+All functions are stateless and return new boards rather than mutating,
+so they are safe to use from any RL algorithm.
+"""
 
 ROWS = 6
 COLS = 7

@@ -22,7 +22,14 @@ class ConnectFourMDP:
     Formalises Connect Four as a Markov Decision Process.
 
     Every RL algorithm (Q-Learning, DQN, policy gradient, ... AlphaZero) talks
-    to the gam exclusively through this interface.
+    to the game exclusively through this interface.
+
+    MDP components:
+      - State space     : State(board, current_player)
+      - Action space    : get_actions(state)
+      - Transition      : step(state, action) → next state  [deterministic]
+      - Reward function : get_reward(state, perspective)
+      - Discount factor : not here — belongs to the learning algorithm
 
     Convention used throughout:
       - 'current_player'  = the player who is ABOUT TO move next
