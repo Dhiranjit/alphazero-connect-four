@@ -82,6 +82,7 @@ class ConnectFourMDP:
         is_terminal() first.
         """
         previous_player = other_player(state.current_player)
+
         if check_win(state.board, previous_player):
             return 1.0 if previous_player == perspective else -1.0
         return 0.0 # draw
